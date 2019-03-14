@@ -1,0 +1,435 @@
+@charset "UTF-8";
+@import url(font-awesome.min.css);
+@import 'hover.css';
+@import url("https://fonts.googleapis.com/css?family=Lato:300,700,300italic,700italic");
+@import url('https://fonts.googleapis.com/css?family=Varela');
+@laptop: ~'screen and (min-width: 64em)';
+@tablet: ~'screen and (min-width: 768px)';
+@darklogo : #141414;
+@grayfooter : #292e32;
+@darkergray : #b8b4b4;
+@background : #f5f5f5;
+@greylink : #b8b4b4;
+@textcolor : #8b8989;
+
+/*
+	D&D by Nous
+
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+*/
+
+/* Reset */
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+blockquote, q {
+	quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+body {
+	-webkit-text-size-adjust: none;
+	font-family: varela!important; ;
+}
+
+/* Box Model */
+
+*, *:before, *:after {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.wrapper {
+	padding: 10px!important;
+}
+.wrapper-x {
+	padding-left: 10px!important;
+	padding-right: 10px!important;
+}
+.nav_color {
+	background-color: @background;
+}
+.navbar {
+	.navbar-brand{
+		color: @textcolor!important;
+		padding: 10px;
+		text-transform: uppercase;
+		font-weight: bolder;
+	}
+
+	.navbar-toggler{
+		color: @textcolor!important;
+	}
+	a {
+		color: @greylink;
+	}
+	& :hover {
+		color: black;
+	}
+	#menu_mobile  {
+		@media @laptop {
+			display: none;
+		}
+
+	}
+	#menu-1er-menu {
+		@media @laptop {
+			display: flex;
+			justify-content: center;
+			flex-direction: row;
+		}
+
+		flex-direction: column;
+		justify-content: center;
+
+		li {
+
+			padding: 10px 0px;
+			text-align: center;
+			display: flex;
+
+			text-align: center;
+			i {
+				align-self: center;
+			}
+
+
+
+			&:hover {
+				background-color: white;
+			}
+		}
+		a {
+			padding: 0px 10px;
+
+
+		}
+	}
+}
+
+.greylink {
+	color : @greylink!important;
+	a {
+		color : @greylink!important;
+		&:hover {
+			color: black!important;
+		}
+	}
+}
+
+#menu-pied-de-page {
+	display: flex;
+	justify-content: center;
+	a {
+		padding: 0px 10px;
+	}
+}
+footer {
+	padding: 50px 0px;
+	background: @grayfooter!important;
+	.footer-copyright {
+		background: @grayfooter!important;
+	}
+	a {
+		color: @greylink!important;
+	}
+	& :hover {
+		color: white!important;
+	}
+}
+main {
+	background-color: @background;
+	box-shadow: 0px -1px 5px 0px rgba(184,180,180,1);
+}
+.header-title {
+	transition: all 0.2s ease ;
+	&:hover {
+		letter-spacing: 1vh;
+
+	}
+}
+.radius {
+	border-radius: 20px!important;
+
+}
+.radius-img {
+	border-radius: 30px!important;
+	padding: 20px;
+}
+.radius-img-page{
+	border-radius: 70px!important;
+}
+
+.navigation{
+	text-align: center;
+	a{
+		color: @grayfooter;
+		-webkit-box-shadow: 0 2px 1px -1px rgba(0,0,0,.2),0 1px 1px 0 rgba(0,0,0,.14),0 1px 3px 0 rgba(0,0,0,.12);
+		box-shadow: 0 2px 1px -1px rgba(0,0,0,.2),0 1px 1px 0 rgba(0,0,0,.14),0 1px 3px 0 rgba(0,0,0,.12);
+		&:hover {
+			background-color: @grayfooter;
+			color: white;
+		}
+	}
+	span{
+		color: white;
+		background-color: @grayfooter;
+
+	}
+	a, span{
+		margin: 0px 5px;
+		padding:10px 18px;
+		border-radius: 10px;
+	}
+}
+.comment-bubble {
+	height: 60px;
+	width: 40px;
+	background-image: url("../img/comment-black-oval-bubble-shape.png");
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+	position: relative;
+	z-index: 99;
+	margin-top: -47px;
+}
+.px-p-50 {
+	@media @laptop{
+		padding : 0px 18vh;
+	}
+	padding: 0px 8vh;
+
+}
+.px-p-70 {
+	@media @laptop {
+		padding: 0px 150px;
+	}
+
+}
+.textcolor {
+	color: @textcolor;
+}
+
+.separator {
+	padding: 3px 0px;
+	background-color: @background;
+
+}
+
+// Style formulaire de commentaire sans connexion
+.comment-form-comment {
+	display: flex;
+	flex-direction: column;
+	& textarea {
+		border: none;
+		border: 4px solid @background;
+	}
+}
+.comment-form-author {
+	display: flex;
+	flex-direction: column;
+	& input {
+		padding: 10px 0px;
+		border: none;
+		border: 4px solid @background;
+	}
+}
+.comment-form-email {
+	display: flex;
+	flex-direction: column;
+	& input {
+		padding: 10px 0px;
+		border: none;
+		border: 4px solid @background;
+	}
+}
+.comment-form-url {
+	display: flex;
+	flex-direction: column;
+	& input {
+		padding: 10px 0px;
+		border: none;
+		border: 4px solid @background;
+	}
+}
+.submit {
+	margin: 40px 0px;
+	border: none;
+	background: black;
+	color: @background;
+	padding: 10px;
+}
+.comment-reply-title {
+	text-transform: uppercase;
+	color: black;
+}
+.navigation-post{
+	text-align: center;
+	a{
+		color: @grayfooter;
+		-webkit-box-shadow: 0 2px 1px -1px rgba(0,0,0,.2),0 1px 1px 0 rgba(0,0,0,.14),0 1px 3px 0 rgba(0,0,0,.12);
+		box-shadow: 0 2px 1px -1px rgba(0,0,0,.2),0 1px 1px 0 rgba(0,0,0,.14),0 1px 3px 0 rgba(0,0,0,.12);
+		&:hover {
+			background-color: @grayfooter;
+			color: white;
+		}
+	}
+	span{
+		color: white;
+		background-color: @grayfooter;
+
+	}
+	a, span{
+		margin: 0px 5px;
+		padding:10px 18px;
+		border-radius: 10px;
+	}
+}
+
+.wpcf7-form {
+	input {
+		border: none;
+		border: 4px solid @background;
+		width: 100%;
+		@media @laptop {
+			width: auto;
+		}
+	}
+	p {
+		.textarea-w {
+			width: 100%;
+		span {
+			width: inherit;
+		}
+		}
+			#DD_textarea {
+				border: 4px solid @background;
+
+				width: 100%;
+			}
+
+
+
+	}
+	.DD_submit {
+		border: none;
+		color: white;
+		background-color: @grayfooter;
+		margin: 0px 5px;
+		padding:10px 18px;
+
+		&:hover {
+			box-shadow: 0px 0px 24px 0px rgba(0,0,0,0.75);
+			background-color: white;
+			color: @grayfooter;
+		}
+
+	}
+
+}
+.sub-menu {
+	position: absolute;
+	margin-top: 34px;
+	display: none;
+	z-index: 99;
+
+
+
+	li {
+		padding-right: 70px!important;
+		background-color: @grayfooter;
+		border-bottom: 1px solid #6c757d;
+	}
+}
+.img-about {
+	display: flex;
+	justify-content: center;
+}
+.card-page {
+	p {
+		margin: 40px 0px;
+	}
+	ul {
+		margin-left: 20px;
+		li {
+			padding: 10px 0px;
+
+		}
+	}
+}
+.form-submit {
+	.submit {
+		cursor: pointer;
+	}
+
+}
+
+// Single product
+
+
+.product-type-simple {
+	padding: 75px;
+}
+.cart {
+	display: flex;
+	justify-content: center;
+}
+
+//page de commande
+.checkout {
+	.col-1 {
+	max-width: 100%;
+	}
+	.col-2 {
+		max-width: 100%;
+	}
+	#order_comments_field {
+		#order_comments {
+			@media @laptop {
+				width: 500px;
+				height: 300px;
+			}
+			width: 300px;
+		}
+	}
+}
+//.woocommerce-customer-details {
+//	.col-1 {
+//		max-width: 100%;
+//	}
+//	.col-2 {
+//		max-width: 100%;
+//	}
+//}
+.wp-block-image {
+	display: flex;
+	justify-content: center;
+}

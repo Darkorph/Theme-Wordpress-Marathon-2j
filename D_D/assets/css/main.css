@@ -1,0 +1,485 @@
+@charset "UTF-8";
+@import url(font-awesome.min.css);
+@import 'hover.css';
+@font-face {
+  font-family: 'Lato';
+  font-style: italic;
+  font-weight: 300;
+  src: local('Lato Light Italic'), local('Lato-LightItalic'), url(https://fonts.gstatic.com/s/lato/v14/S6u_w4BMUTPHjxsI9w2_Gwfo.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Lato';
+  font-style: italic;
+  font-weight: 700;
+  src: local('Lato Bold Italic'), local('Lato-BoldItalic'), url(https://fonts.gstatic.com/s/lato/v14/S6u_w4BMUTPHjxsI5wq_Gwfo.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Lato Light'), local('Lato-Light'), url(https://fonts.gstatic.com/s/lato/v14/S6u9w4BMUTPHh7USSwiPHA.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Lato Bold'), local('Lato-Bold'), url(https://fonts.gstatic.com/s/lato/v14/S6u9w4BMUTPHh6UVSwiPHA.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Varela';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Varela'), url(https://fonts.gstatic.com/s/varela/v9/DPEtYwqExx0AWHX5Ax4B.ttf) format('truetype');
+}
+/*
+	D&D by Nous
+
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+*/
+/* Reset */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+body {
+  -webkit-text-size-adjust: none;
+  font-family: varela!important;
+}
+/* Box Model */
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.wrapper {
+  padding: 10px!important;
+}
+.wrapper-x {
+  padding-left: 10px!important;
+  padding-right: 10px!important;
+}
+.nav_color {
+  background-color: #f5f5f5;
+}
+.navbar .navbar-brand {
+  color: #8b8989 !important;
+  padding: 10px;
+  text-transform: uppercase;
+  font-weight: bolder;
+}
+.navbar .navbar-toggler {
+  color: #8b8989 !important;
+}
+.navbar a {
+  color: #b8b4b4;
+}
+.navbar :hover {
+  color: black;
+}
+@media screen and (min-width: 64em) {
+  .navbar #menu_mobile {
+    display: none;
+  }
+}
+.navbar #menu-1er-menu {
+  flex-direction: column;
+  justify-content: center;
+}
+@media screen and (min-width: 64em) {
+  .navbar #menu-1er-menu {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+  }
+}
+.navbar #menu-1er-menu li {
+  padding: 10px 0px;
+  display: flex;
+  text-align: center;
+}
+.navbar #menu-1er-menu li i {
+  align-self: center;
+}
+.navbar #menu-1er-menu li:hover {
+  background-color: white;
+}
+.navbar #menu-1er-menu a {
+  padding: 0px 10px;
+}
+.greylink {
+  color: #b8b4b4 !important;
+}
+.greylink a {
+  color: #b8b4b4 !important;
+}
+.greylink a:hover {
+  color: black!important;
+}
+#menu-pied-de-page {
+  display: flex;
+  justify-content: center;
+}
+#menu-pied-de-page a {
+  padding: 0px 10px;
+}
+footer {
+  padding: 50px 0px;
+  background: #292e32 !important;
+}
+footer .footer-copyright {
+  background: #292e32 !important;
+}
+footer a {
+  color: #b8b4b4 !important;
+}
+footer :hover {
+  color: white!important;
+}
+main {
+  background-color: #f5f5f5;
+  box-shadow: 0px -1px 5px 0px #b8b4b4;
+}
+.header-title {
+  transition: all 0.2s ease;
+}
+.header-title:hover {
+  letter-spacing: 1vh;
+}
+.radius {
+  border-radius: 20px!important;
+}
+.radius-img {
+  border-radius: 30px!important;
+  padding: 20px;
+}
+.radius-img-page {
+  border-radius: 70px!important;
+}
+.navigation {
+  text-align: center;
+}
+.navigation a {
+  color: #292e32;
+  -webkit-box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12);
+  box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12);
+}
+.navigation a:hover {
+  background-color: #292e32;
+  color: white;
+}
+.navigation span {
+  color: white;
+  background-color: #292e32;
+}
+.navigation a,
+.navigation span {
+  margin: 0px 5px;
+  padding: 10px 18px;
+  border-radius: 10px;
+}
+.comment-bubble {
+  height: 60px;
+  width: 40px;
+  background-image: url("../img/comment-black-oval-bubble-shape.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  z-index: 99;
+  margin-top: -47px;
+}
+.px-p-50 {
+  padding: 0px 8vh;
+}
+@media screen and (min-width: 64em) {
+  .px-p-50 {
+    padding: 0px 18vh;
+  }
+}
+@media screen and (min-width: 64em) {
+  .px-p-70 {
+    padding: 0px 150px;
+  }
+}
+.textcolor {
+  color: #8b8989;
+}
+.separator {
+  padding: 3px 0px;
+  background-color: #f5f5f5;
+}
+.comment-form-comment {
+  display: flex;
+  flex-direction: column;
+}
+.comment-form-comment textarea {
+  border: none;
+  border: 4px solid #f5f5f5;
+}
+.comment-form-author {
+  display: flex;
+  flex-direction: column;
+}
+.comment-form-author input {
+  padding: 10px 0px;
+  border: none;
+  border: 4px solid #f5f5f5;
+}
+.comment-form-email {
+  display: flex;
+  flex-direction: column;
+}
+.comment-form-email input {
+  padding: 10px 0px;
+  border: none;
+  border: 4px solid #f5f5f5;
+}
+.comment-form-url {
+  display: flex;
+  flex-direction: column;
+}
+.comment-form-url input {
+  padding: 10px 0px;
+  border: none;
+  border: 4px solid #f5f5f5;
+}
+.submit {
+  margin: 40px 0px;
+  border: none;
+  background: black;
+  color: #f5f5f5;
+  padding: 10px;
+}
+.comment-reply-title {
+  text-transform: uppercase;
+  color: black;
+}
+.navigation-post {
+  text-align: center;
+}
+.navigation-post a {
+  color: #292e32;
+  -webkit-box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12);
+  box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12);
+}
+.navigation-post a:hover {
+  background-color: #292e32;
+  color: white;
+}
+.navigation-post span {
+  color: white;
+  background-color: #292e32;
+}
+.navigation-post a,
+.navigation-post span {
+  margin: 0px 5px;
+  padding: 10px 18px;
+  border-radius: 10px;
+}
+.wpcf7-form input {
+  border: none;
+  border: 4px solid #f5f5f5;
+  width: 100%;
+}
+@media screen and (min-width: 64em) {
+  .wpcf7-form input {
+    width: auto;
+  }
+}
+.wpcf7-form p .textarea-w {
+  width: 100%;
+}
+.wpcf7-form p .textarea-w span {
+  width: inherit;
+}
+.wpcf7-form p #DD_textarea {
+  border: 4px solid #f5f5f5;
+  width: 100%;
+}
+.wpcf7-form .DD_submit {
+  border: none;
+  color: white;
+  background-color: #292e32;
+  margin: 0px 5px;
+  padding: 10px 18px;
+}
+.wpcf7-form .DD_submit:hover {
+  box-shadow: 0px 0px 24px 0px rgba(0, 0, 0, 0.75);
+  background-color: white;
+  color: #292e32;
+}
+.sub-menu {
+  position: absolute;
+  margin-top: 34px;
+  display: none;
+  z-index: 99;
+}
+.sub-menu li {
+  padding-right: 70px!important;
+  background-color: #292e32;
+  border-bottom: 1px solid #6c757d;
+}
+.img-about {
+  display: flex;
+  justify-content: center;
+}
+.card-page p {
+  margin: 40px 0px;
+}
+.card-page ul {
+  margin-left: 20px;
+}
+.card-page ul li {
+  padding: 10px 0px;
+}
+.form-submit .submit {
+  cursor: pointer;
+}
+.product-type-simple {
+  padding: 75px;
+}
+.cart {
+  display: flex;
+  justify-content: center;
+}
+.checkout .col-1 {
+  max-width: 100%;
+}
+.checkout .col-2 {
+  max-width: 100%;
+}
+.checkout #order_comments_field #order_comments {
+  width: 300px;
+}
+@media screen and (min-width: 64em) {
+  .checkout #order_comments_field #order_comments {
+    width: 500px;
+    height: 300px;
+  }
+}
+.wp-block-image {
+  display: flex;
+  justify-content: center;
+}
+/*# sourceMappingURL=main.css.map */
