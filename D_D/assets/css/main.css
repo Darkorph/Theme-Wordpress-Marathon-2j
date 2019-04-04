@@ -5,25 +5,25 @@
   font-family: 'Lato';
   font-style: italic;
   font-weight: 300;
-  src: local('Lato Light Italic'), local('Lato-LightItalic'), url(https://fonts.gstatic.com/s/lato/v14/S6u_w4BMUTPHjxsI9w2_Gwfo.ttf) format('truetype');
+  src: local('Lato Light Italic'), local('Lato-LightItalic'), url(https://fonts.gstatic.com/s/lato/v15/S6u_w4BMUTPHjxsI9w2_Gwfo.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Lato';
   font-style: italic;
   font-weight: 700;
-  src: local('Lato Bold Italic'), local('Lato-BoldItalic'), url(https://fonts.gstatic.com/s/lato/v14/S6u_w4BMUTPHjxsI5wq_Gwfo.ttf) format('truetype');
+  src: local('Lato Bold Italic'), local('Lato-BoldItalic'), url(https://fonts.gstatic.com/s/lato/v15/S6u_w4BMUTPHjxsI5wq_Gwfo.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Lato';
   font-style: normal;
   font-weight: 300;
-  src: local('Lato Light'), local('Lato-Light'), url(https://fonts.gstatic.com/s/lato/v14/S6u9w4BMUTPHh7USSwiPHA.ttf) format('truetype');
+  src: local('Lato Light'), local('Lato-Light'), url(https://fonts.gstatic.com/s/lato/v15/S6u9w4BMUTPHh7USSwiPHA.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Lato';
   font-style: normal;
   font-weight: 700;
-  src: local('Lato Bold'), local('Lato-Bold'), url(https://fonts.gstatic.com/s/lato/v14/S6u9w4BMUTPHh6UVSwiPHA.ttf) format('truetype');
+  src: local('Lato Bold'), local('Lato-Bold'), url(https://fonts.gstatic.com/s/lato/v15/S6u9w4BMUTPHh6UVSwiPHA.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Varela';
@@ -191,6 +191,9 @@ body {
 .navbar .navbar-toggler {
   color: #8b8989 !important;
 }
+.navbar .navbar-toggler-icon {
+  color: black!important;
+}
 .navbar a {
   color: #b8b4b4;
 }
@@ -239,9 +242,18 @@ body {
 #menu-pied-de-page {
   display: flex;
   justify-content: center;
+  text-align: center;
+  padding: 0px 15px ;
 }
-#menu-pied-de-page a {
-  padding: 0px 10px;
+@media screen and (min-width: 64em) {
+  #menu-pied-de-page {
+    padding: 0;
+  }
+}
+@media screen and (min-width: 768px) {
+  #menu-pied-de-page a {
+    padding: 0px 10px;
+  }
 }
 footer {
   padding: 50px 0px;
@@ -310,14 +322,24 @@ main {
   margin-top: -47px;
 }
 .px-p-50 {
-  padding: 0px 8vh;
+  padding: 0px 0vh;
 }
-@media screen and (min-width: 64em) {
+@media screen and (min-width: 80em) {
   .px-p-50 {
     padding: 0px 18vh;
   }
 }
 @media screen and (min-width: 64em) {
+  .px-p-50 {
+    padding: 0px 8vh;
+  }
+}
+@media screen and (min-width: 64em) {
+  .px-p-70 {
+    padding: 0px 50px;
+  }
+}
+@media screen and (min-width: 80em) {
   .px-p-70 {
     padding: 0px 150px;
   }
@@ -453,15 +475,48 @@ main {
 .card-page ul li {
   padding: 10px 0px;
 }
+.comment-respond {
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .comment-respond {
+    text-align: start;
+  }
+}
+.form-submit {
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .form-submit {
+    text-align: start;
+  }
+}
 .form-submit .submit {
   cursor: pointer;
 }
 .product-type-simple {
-  padding: 75px;
+  padding: 35px;
+}
+@media screen and (min-width: 64em) {
+  .product-type-simple {
+    padding: 75px;
+  }
 }
 .cart {
   display: flex;
   justify-content: center;
+}
+.single_add_to_cart_button {
+  background-color: #292e32 !important;
+  transition-duration: 0.3s;
+}
+.single_add_to_cart_button:hover {
+  background-color: #f5f5f5 !important;
+  color: #292e32 !important;
+  box-shadow: 3px 3px 6px 0px rgba(0, 0, 0, 0.75) !important;
+}
+.wc-tabs {
+  padding: 0!important;
 }
 .checkout .col-1 {
   max-width: 100%;
@@ -470,11 +525,11 @@ main {
   max-width: 100%;
 }
 .checkout #order_comments_field #order_comments {
-  width: 300px;
+  width: 200px;
 }
 @media screen and (min-width: 64em) {
   .checkout #order_comments_field #order_comments {
-    width: 500px;
+    width: 300px;
     height: 300px;
   }
 }

@@ -1,7 +1,7 @@
 <?php
 get_header();
 ?>
-<article id="post-<?php the_id(); ?>" class="m-0 p-5 radius">
+<article id="post-<?php the_id(); ?>" class="m-0 p-3 p-md-5 radius">
 <?php the_post() ?>
     <div class=" card text-center radius z-depth-1 ">
 

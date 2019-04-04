@@ -32,7 +32,7 @@
 
     <div class="text-center p-4 bg-white">
         <div>
-            <h1 class="h1 col-2 mx-auto m-0 font-weight-bold header-title">D&D</h1>
+            <h1 class="h1 col-lg-2 mx-auto m-0 font-weight-bold header-title">D&D</h1>
             <h4 class="greylink m-1">Design et Développement Web</h4>
         </div>
         <div class="greylink">

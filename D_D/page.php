@@ -7,11 +7,11 @@ Template Name: Static Page
 get_header();
 ?>
 
-    <article id="post-<?php the_id(); ?>" class="m-0 p-5 radius">
+    <article id="post-<?php the_id(); ?>" class="m-0 p-3 p-lg-5 radius">
         <?php the_post() ?>
         <div class=" card text-center radius z-depth-1 ">
             <!-- Title -->
-            <h2 class="card-title my-5"><a class="text-dark" href="<?php the_permalink();?>"><?php the_title();?></a></h2>
+            <h2 class="card-title my-4 my-md-5"><a class="text-dark" href="<?php the_permalink();?>"><?php the_title();?></a></h2>
 
 
             <!-- Card content -->

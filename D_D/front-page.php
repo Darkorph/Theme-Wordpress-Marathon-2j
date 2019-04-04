@@ -2,7 +2,7 @@
 get_header();
 ?>
 
-<div class=" p-5 card-columns">
+<div class=" p-3 p-lg-5 card-columns">
 
 
     <?php

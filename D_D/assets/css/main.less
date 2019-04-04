@@ -4,6 +4,7 @@
 @import url("https://fonts.googleapis.com/css?family=Lato:300,700,300italic,700italic");
 @import url('https://fonts.googleapis.com/css?family=Varela');
 @laptop: ~'screen and (min-width: 64em)';
+@big_laptop: ~'screen and (min-width: 80em)';
 @tablet: ~'screen and (min-width: 768px)';
 @darklogo : #141414;
 @grayfooter : #292e32;
@@ -88,6 +89,9 @@ body {
 	.navbar-toggler{
 		color: @textcolor!important;
 	}
+	.navbar-toggler-icon {
+		color: black!important;
+	}
 	a {
 		color: @greylink;
 	}
@@ -148,9 +152,19 @@ body {
 #menu-pied-de-page {
 	display: flex;
 	justify-content: center;
-	a {
-		padding: 0px 10px;
+	text-align: center;
+	padding: 0px 15px ;
+	@media @laptop {
+		padding: 0;
 	}
+
+	a {
+		@media @tablet {
+			padding: 0px 10px;
+		}
+
+	}
+
 }
 footer {
 	padding: 50px 0px;
@@ -222,14 +236,20 @@ main {
 	margin-top: -47px;
 }
 .px-p-50 {
-	@media @laptop{
+	@media @big_laptop{
 		padding : 0px 18vh;
 	}
-	padding: 0px 8vh;
+	@media @laptop{
+		padding : 0px 8vh;
+	}
+	padding: 0px 0vh;
 
 }
 .px-p-70 {
 	@media @laptop {
+		padding: 0px 50px;
+	}
+	@media @big_laptop {
 		padding: 0px 150px;
 	}
 
@@ -385,7 +405,17 @@ main {
 		}
 	}
 }
+.comment-respond {
+	text-align: center;
+	@media @tablet {
+		text-align: start;
+	}
+}
 .form-submit {
+	text-align: center;
+	@media @tablet {
+		text-align: start;
+	}
 	.submit {
 		cursor: pointer;
 	}
@@ -396,11 +426,26 @@ main {
 
 
 .product-type-simple {
-	padding: 75px;
+	@media @laptop {
+		padding: 75px;
+	}
+	padding: 35px;
 }
 .cart {
 	display: flex;
 	justify-content: center;
+}
+.single_add_to_cart_button {
+	background-color: #292e32!important;
+	transition-duration: 0.3s;
+	&:hover {
+		background-color: #f5f5f5!important;
+		color: #292e32!important;
+		box-shadow: 3px 3px 6px 0px rgba(0,0,0,0.75)!important;
+	}
+}
+.wc-tabs {
+	padding: 0!important;
 }
 
 //page de commande
@@ -414,12 +459,14 @@ main {
 	#order_comments_field {
 		#order_comments {
 			@media @laptop {
-				width: 500px;
+				width: 300px;
 				height: 300px;
 			}
-			width: 300px;
+			width: 200px;
 		}
+
 	}
+
 }
 //.woocommerce-customer-details {
 //	.col-1 {

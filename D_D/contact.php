@@ -7,7 +7,7 @@ Template Name: Contact
 get_header();
 ?>
 
-    <article id="post-<?php the_id(); ?>" class="m-0 p-5 radius">
+    <article id="post-<?php the_id(); ?>" class="m-0 p-3 p-md-5 radius">
         <?php the_post() ?>
         <div class=" card text-center radius z-depth-1 ">
 
@@ -33,7 +33,7 @@ get_header();
 
         </div>
     </article>
-    <div class="navigation-post pb-5 d-flex justify-content-between px-5">
+    <div class="navigation-post pb-5 d-flex justify-content-between px-2 px-md-5">
         <?php previous_post_link('%link', '← %title'); ?>
         <?php next_post_link('%link', '%title →');?>
     </div>
